@@ -1,0 +1,107 @@
+
+
+p {
+    margin: 0;
+}
+
+.topbar-top { 
+    display: flex;
+    justify-content: space-between; 
+    margin: 32px 0;
+    padding: 0 99px;
+    background-color: var(--secondary-color);
+    height: auto;
+}
+
+.topbar-left {
+    display: flex;
+    gap: 40px;
+
+    .topbar-profile {
+        display: flex;
+        gap: 9px;
+
+        .topbar-profile__description {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+
+            p {
+                line-height: 1.5;
+            }
+        }
+
+        .topbar-profile__description a {
+            line-height: 1;
+            font-size: 0.64em;
+        }
+    }
+
+    .topbar-searcher {
+        display: flex;
+        position: relative;
+        border: 1px solid var(--neutral-color);
+        border-radius: 12px;
+        width: 270px;
+
+        .searcher-label {
+            margin-left: 25px;
+        }
+
+        .searcher-input {
+            margin-left: 15px;
+            padding-bottom: 3px;
+        }
+
+        img {
+            padding-left: 15px;
+            cursor: pointer;
+        }
+
+    }
+}
+
+.topbar-searcher ::ng-deep {
+
+    .mat-form-field-label-wrapper {
+        margin-left: 30px;
+    }
+
+    .mat-form-field-underline {
+        display: none;
+    }
+
+    .mat-form-field-wrapper {
+        padding-bottom: 8px;
+    }
+
+}   
+
+.topbar-right {
+    button {
+        background-color: var(--success-color);
+        color: var(--secondary-color);
+        padding: 8px 20px;
+        box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+    }
+}
+
+::ng-deep .mat-form-field-appearance-legacy.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label, 
+.mat-form-field-appearance-legacy.mat-form-field-can-float .mat-input-server:focus+.mat-form-field-label-wrapper .mat-form-field-label {
+    transform: translateY(-0.68125em) scale(0.75) perspective(100px) translateZ(0.001px);
+}
+
+::ng-deep .custom-snkb {
+    background-color: var(--danger-color);
+    color: var(--secondary-color);
+
+    span {
+        color: var(--secondary-color);
+    }
+}
+
+

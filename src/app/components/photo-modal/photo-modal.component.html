@@ -1,0 +1,29 @@
+<section class="container-photo">
+    <h1 mat-dialog-title *ngIf="!edition">Add a new photo</h1>
+    <h1 mat-dialog-title *ngIf="edition">Are you sure?</h1>
+    <form [formGroup]="photoForm" (ngSubmit)="addPhoto()">
+        <mat-dialog-content class="mat-dialog-photo" *ngIf="!edition">
+            <div class="photo-label">
+                <p>Label</p>
+                <input matInput type="text" formControlName="photo_lbl" class="label-input" placeholder="Suspendisse elit massa">
+            </div>
+            <div class="photo-id">
+                <p>Photo ID</p>
+                <input matInput formControlName="photo_id" class="id-input" placeholder="8306536" type="number">
+                <p class="id-test">ID you can use: 13568398, 1726567, 3633711, 3225517, 2592086, 322719, 1885213, 2960176,
+                    3987844, 4186247
+                </p>
+            </div>
+        </mat-dialog-content>
+        <mat-dialog-content class="mat-dialog-photo" *ngIf="edition">
+            <div class="photo-info">
+                <p>Photo: {{ description }}</p>
+            </div>
+        </mat-dialog-content>
+        <mat-dialog-actions align="end" class="actions">
+            <button mat-button mat-dialog-close>Cancel</button>
+            <button mat-button class="action-submit" [disabled]="photoForm.invalid" *ngIf="!edition">Submit</button>
+            <button mat-button [mat-dialog-close]="true" cdkFocusInitial class="action-delete" *ngIf="edition" (click)="deleteOption()">Delete</button>
+        </mat-dialog-actions>
+    </form>
+</section>

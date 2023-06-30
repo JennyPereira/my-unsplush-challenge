@@ -1,0 +1,7 @@
+<div class="gallery-container"> 
+    <div *ngFor="let image of searchedImages">
+        <button mat-button type="submit" (click)="deleteImage(image)">delete</button>
+        <img [src]="image.src.medium" [alt]="image.alt">
+        <p> {{image.alt }} </p>
+    </div>
+</div>

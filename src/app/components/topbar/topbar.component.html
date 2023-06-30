@@ -1,0 +1,19 @@
+<mat-toolbar class="topbar-top">
+    <div class="topbar-left">
+        <div class="topbar-profile">
+            <img src="../../../assets/img/Logo_of_Unsplash.svg" alt="Unplash Logo" width="20">
+            <div class="topbar-profile__description">
+                <p>My Unplash</p>
+                <a href="https://devchallenges.io/">devchallenges.io</a>
+            </div>
+        </div>
+        <mat-form-field class="topbar-searcher">
+            <img src="../../../assets/img/search-icon.svg" alt="Search icon" width="20" (click)="filterResults()">
+            <mat-label class="searcher-label">Search by name</mat-label>
+            <input matInput type="text" class="searcher-input" [(ngModel)] = filterText>
+        </mat-form-field>
+    </div>
+    <div class="topbar-right">
+        <button mat-raised-button type="submit" (click)="addNewPhoto()">Add a photo</button>
+    </div>
+</mat-toolbar>
